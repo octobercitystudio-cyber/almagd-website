@@ -52,28 +52,28 @@ const Home = () => {
           </div>
           <div className="partners-grid">
             <div className="partner-logo">
-              <img src="/images/partners/centrada.jpg" alt="Centrada Developments" />
+              <img src="/images/partners/logo1.jpg" alt="Partner 1" />
             </div>
             <div className="partner-logo">
-              <img src="/images/partners/psc.jpg" alt="PSC Protection" />
+              <img src="/images/partners/logo2.jpg" alt="Partner 2" />
             </div>
             <div className="partner-logo">
-              <img src="/images/partners/mens-club.jpg" alt="MC Men's Club" />
+              <img src="/images/partners/logo3.jpg" alt="Partner 3" />
             </div>
             <div className="partner-logo">
-              <img src="/images/partners/egy-smart.jpg" alt="Egy Smart" />
+              <img src="/images/partners/logo4.jpg" alt="Partner 4" />
             </div>
             <div className="partner-logo">
-              <img src="/images/partners/al-khalifa.jpg" alt="Al-Khalifa Construction" />
+              <img src="/images/partners/logo5.jpg" alt="Partner 5" />
             </div>
             <div className="partner-logo">
-              <img src="/images/partners/cedar-hills.jpg" alt="Cedar Hills" />
+              <img src="/images/partners/logo6.jpg" alt="Partner 6" />
             </div>
             <div className="partner-logo">
-              <img src="/images/partners/sovana.jpg" alt="Sovana" />
+              <img src="/images/partners/logo7.jpg" alt="Partner 7" />
             </div>
             <div className="partner-logo">
-              <img src="/images/partners/ccc.jpg" alt="CCC" />
+              <img src="/images/partners/logo8.jpg" alt="Partner 8" />
             </div>
           </div>
         </div>
