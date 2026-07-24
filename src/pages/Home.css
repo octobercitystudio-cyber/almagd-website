@@ -238,13 +238,23 @@
 }
 
 .partner-logo {
-  color: var(--text-muted);
-  opacity: 0.5;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo img {
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
   transition: all var(--transition-fast);
 }
 
-.partner-logo:hover {
-  color: var(--accent);
+.partner-logo:hover img {
+  filter: grayscale(0%);
   opacity: 1;
   transform: scale(1.1);
 }
@@ -289,8 +299,8 @@
     gap: 2rem;
   }
   
-  .partner-logo svg {
-    width: 40px;
-    height: 40px;
+  .partner-logo img {
+    width: 100px;
+    height: 60px;
   }
 }

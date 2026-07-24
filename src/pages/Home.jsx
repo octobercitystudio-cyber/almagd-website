@@ -51,11 +51,18 @@ const Home = () => {
             <p>نفخر بالعمل مع نخبة من الشركات والمؤسسات الرائدة</p>
           </div>
           <div className="partners-grid">
-            <div className="partner-logo"><FaCouch size={60} /></div>
-            <div className="partner-logo"><FaChair size={60} /></div>
-            <div className="partner-logo"><FaBed size={60} /></div>
-            <div className="partner-logo"><FaHammer size={60} /></div>
-            <div className="partner-logo"><FaBuilding size={60} /></div>
+            <div className="partner-logo">
+              <img src="/images/partners/centrada.jpg" alt="Centrada Developments" />
+            </div>
+            <div className="partner-logo">
+              <img src="/images/partners/psc.jpg" alt="PSC Protection" />
+            </div>
+            <div className="partner-logo">
+              <img src="/images/partners/mens-club.jpg" alt="MC Men's Club" />
+            </div>
+            <div className="partner-logo">
+              <img src="/images/partners/egy-smart.jpg" alt="Egy Smart" />
+            </div>
           </div>
         </div>
       </section>
