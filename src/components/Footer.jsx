@@ -16,7 +16,7 @@ const Footer = () => {
             رواد توريد الأخشاب الطبيعية والصناعية بجودة عالمية وفخامة تلبي طموحاتك.
           </p>
           <div className="social-links">
-            <a href="#"><FaFacebook size={20} /></a>
+            <a href="https://www.facebook.com/almajdwoods/" target="_blank" rel="noopener noreferrer"><FaFacebook size={20} /></a>
           </div>
         </div>
 
