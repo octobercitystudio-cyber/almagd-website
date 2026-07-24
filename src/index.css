@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --primary: #3E2723; /* Dark Mahogany */
+  --primary-light: #5d4037;
+  --secondary: #2E4C3B; /* Olive Green / Forest */
+  --secondary-light: #446d56;
+  --accent: #D4AF37; /* Copper Gold */
+  --accent-hover: #b5952f;
+  --bg-color: #FDFBF7; /* Off-White / Pine */
+  --text-main: #1a1a1a;
+  --text-muted: #666666;
+  --white: #ffffff;
+  --border-color: #e5e5e5;
+
+  /* Typography */
+  --font-arabic: 'Tajawal', sans-serif;
+  --font-english: 'Outfit', sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(62, 39, 35, 0.05);
+  --shadow-md: 0 4px 12px rgba(62, 39, 35, 0.1);
+  --shadow-lg: 0 12px 24px rgba(62, 39, 35, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-arabic);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  direction: rtl; /* Right to left for Arabic */
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-arabic);
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+button, .btn {
+  font-family: var(--font-arabic);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all var(--transition-normal);
+}
+
+/* Reusable Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  display: inline-block;
+  background-image: url('/images/wood_pattern.jpg');
+  background-color: var(--primary);
+  background-blend-mode: multiply;
+  color: var(--white);
+  padding: 1rem 3rem;
+  border: 3px solid #2d1b15;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.3), inset 0 0 15px rgba(0,0,0,0.6);
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title h2::before, .section-title h2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.6), inset -1px -1px 3px rgba(0,0,0,0.8), inset 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+.section-title h2::before { 
+  left: 15px;
+  background: 
+    linear-gradient(35deg, transparent 42%, rgba(0,0,0,0.7) 46%, rgba(0,0,0,0.7) 54%, transparent 58%),
+    radial-gradient(circle at 35% 35%, #e0e0e0, #888 50%, #333);
+}
+
+.section-title h2::after { 
+  right: 15px;
+  background: 
+    linear-gradient(-25deg, transparent 42%, rgba(0,0,0,0.7) 46%, rgba(0,0,0,0.7) 54%, transparent 58%),
+    radial-gradient(circle at 35% 35%, #e0e0e0, #888 50%, #333);
+}
+
+.section-title p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* Flex & Grid Utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Premium Card */
+.premium-card {
+  position: relative;
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--border-color);
+}
+
+.premium-card::before, .premium-card::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5), inset -1px -1px 3px rgba(0,0,0,0.8), inset 1px 1px 2px rgba(255,255,255,0.5);
+  z-index: 10;
+}
+
+.premium-card::before { 
+  left: 15px;
+  background: 
+    linear-gradient(20deg, transparent 42%, rgba(0,0,0,0.7) 46%, rgba(0,0,0,0.7) 54%, transparent 58%),
+    radial-gradient(circle at 35% 35%, #e0e0e0, #888 50%, #333);
+}
+
+.premium-card::after { 
+  right: 15px;
+  background: 
+    linear-gradient(-15deg, transparent 42%, rgba(0,0,0,0.7) 46%, rgba(0,0,0,0.7) 54%, transparent 58%),
+    radial-gradient(circle at 35% 35%, #e0e0e0, #888 50%, #333);
+}
+
+.premium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: all var(--transition-normal);
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+/* Base Responsive Rules */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3rem 0;
+  }
+  
+  .section-title h2 {
+    font-size: 1.8rem;
+    padding: 0.8rem 2rem;
+  }
+  
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}

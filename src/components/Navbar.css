@@ -1,0 +1,127 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all var(--transition-normal);
+  padding: 0.2rem 0;
+  background: #FFD700;
+  border-bottom: 8px solid var(--primary);
+}
+
+.navbar.scrolled {
+  padding: 0.1rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+  position: relative;
+}
+
+.logo {
+  font-family: var(--font-arabic);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  gap: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width var(--transition-normal);
+}
+
+.btn-header {
+  background-color: var(--primary);
+  color: #FFD700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.btn-header:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.nav-links a:hover::after, .nav-links a.active-link::after {
+  width: 100%;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  color: var(--primary);
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6rem 2rem 2rem;
+    transition: right var(--transition-normal);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    right: 0;
+    background-color: var(--white); /* Fallback for glass */
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .mobile-only .btn {
+    width: 100%;
+  }
+
+  .mobile-toggle {
+    display: block;
+    z-index: 1001;
+  }
+}
