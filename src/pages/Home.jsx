@@ -63,6 +63,18 @@ const Home = () => {
             <div className="partner-logo">
               <img src="/images/partners/egy-smart.jpg" alt="Egy Smart" />
             </div>
+            <div className="partner-logo">
+              <img src="/images/partners/al-khalifa.jpg" alt="Al-Khalifa Construction" />
+            </div>
+            <div className="partner-logo">
+              <img src="/images/partners/cedar-hills.jpg" alt="Cedar Hills" />
+            </div>
+            <div className="partner-logo">
+              <img src="/images/partners/sovana.jpg" alt="Sovana" />
+            </div>
+            <div className="partner-logo">
+              <img src="/images/partners/ccc.jpg" alt="CCC" />
+            </div>
           </div>
         </div>
       </section>
