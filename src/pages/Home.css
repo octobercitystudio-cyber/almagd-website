@@ -248,7 +248,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Forced single line */
 }
 
 .slider-container:hover .slider-track {
@@ -260,11 +260,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
 .partner-logo img {
-  width: 220px; /* Increased from 150px */
-  height: 120px; /* Increased from 80px */
+  width: 280px; /* Increased massively */
+  height: 160px; /* Increased massively */
+  max-width: 100%;
   object-fit: contain;
   opacity: 1;
   transition: all var(--transition-fast);
@@ -322,6 +324,10 @@
   
   .partner-logo img {
     width: 100px;
-    height: 60px;
+    height: 70px;
+  }
+  
+  .slide {
+    gap: 0.5rem;
   }
 }
