@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -17,8 +17,6 @@ const Footer = () => {
           </p>
           <div className="social-links">
             <a href="#"><FaFacebook size={20} /></a>
-            <a href="#"><FaInstagram size={20} /></a>
-            <a href="#"><FaLinkedin size={20} /></a>
           </div>
         </div>
 

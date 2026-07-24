@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle, Users, Award, Truck, TreePine } from 'lucide-react';
-import { FaCouch, FaChair, FaBed, FaHammer, FaBuilding, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaCouch, FaChair, FaBed, FaHammer, FaBuilding, FaFacebook } from 'react-icons/fa';
 import './Home.css';
 
 const Home = () => {
