@@ -1,11 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, TreePine, Leaf, Recycle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import './About.css';
 
 const About = () => {
   return (
     <div className="about-page">
+      <Helmet>
+        <title>من نحن | شركة المجد لتوريد الأخشاب في مصر</title>
+        <meta name="description" content="تعرف على شركة المجد، شريكك الموثوق وأكبر مورد لجميع أنواع الأخشاب الطبيعية والصناعية في مصر والسادس من أكتوبر (خشب زان، أرو، موسكي، كونتر، بياض، MDF)." />
+      </Helmet>
       <section className="page-header">
         <div className="container">
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>من نحن</motion.h1>

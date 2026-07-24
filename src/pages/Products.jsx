@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import './Products.css';
 
 const Products = () => {
@@ -19,6 +20,10 @@ const Products = () => {
 
   return (
     <div className="products-page">
+      <Helmet>
+        <title>منتجات الأخشاب | شركة المجد لتوريد الأخشاب</title>
+        <meta name="description" content="تشكيلة واسعة من أجود أنواع الأخشاب في مصر: بونتي، موسكي، زان، أرو، لاتيزانا، خشب عزيزي وسويدي بأفضل أسعار التوريد للمقاولين." />
+      </Helmet>
       {/* Header */}
       <section className="page-header">
         <div className="container">

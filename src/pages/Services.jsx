@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Scissors, Zap, Shield, Truck } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import './Services.css';
 
 const Services = () => {
@@ -29,6 +30,10 @@ const Services = () => {
 
   return (
     <div className="services-page">
+      <Helmet>
+        <title>خدماتنا | شركة المجد لتوريد الأخشاب</title>
+        <meta name="description" content="خدمات تقطيع الأخشاب CNC، تقشيط الحواف، والمعالجة الكيميائية للخشب. توريد سريع وتجهيز للأخشاب في مصر والسادس من أكتوبر." />
+      </Helmet>
       <section className="page-header">
         <div className="container">
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>خدماتنا</motion.h1>

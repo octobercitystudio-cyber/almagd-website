@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle, Users, Award, Truck, TreePine } from 'lucide-react';
 import { FaCouch, FaChair, FaBed, FaHammer, FaBuilding, FaFacebook } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 import './Home.css';
 
 const Home = () => {
   return (
     <div className="home-page">
+      <Helmet>
+        <title>شركة المجد لتوريد الأخشاب | الرئيسية</title>
+        <meta name="description" content="شركة المجد رواد توريد الأخشاب الطبيعية والصناعية في مصر. خشب موسكي، زان، أرو، MDF، أبلكاش، بونتي، ولاتيزانا. توريد لجميع المشاريع في 6 أكتوبر." />
+      </Helmet>
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-overlay"></div>

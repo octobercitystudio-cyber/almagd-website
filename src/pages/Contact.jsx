@@ -1,11 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import './Contact.css';
 
 const Contact = () => {
   return (
     <div className="contact-page">
+      <Helmet>
+        <title>اتصل بنا | شركة المجد لتوريد الأخشاب</title>
+        <meta name="description" content="تواصل مع شركة المجد لتوريد الأخشاب. العنوان: 6 أكتوبر، الجيزة. هاتف المبيعات والواتساب: 01127151475 لطلب عروض أسعار الخشب الموسكي والزان وغيره." />
+      </Helmet>
       <section className="page-header">
         <div className="container">
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>اتصل بنا</motion.h1>
