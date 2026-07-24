@@ -6,6 +6,16 @@ import { FaCouch, FaChair, FaBed, FaHammer, FaBuilding, FaFacebook } from 'react
 import { Helmet } from 'react-helmet-async';
 import './Home.css';
 
+const PartnerLogo = ({ src, alt }) => {
+  const [error, setError] = React.useState(false);
+  if (error) return null;
+  return (
+    <div className="partner-logo">
+      <img src={src} alt={alt} onError={() => setError(true)} />
+    </div>
+  );
+};
+
 const Home = () => {
   return (
     <div className="home-page">
@@ -54,17 +64,17 @@ const Home = () => {
             <div className="slider-track">
               {/* Slide 1 */}
               <div className="slide">
-                <div className="partner-logo"><img src="/images/partners/logo1.jpg" alt="Partner 1" onError={(e) => e.target.style.display='none'} /></div>
-                <div className="partner-logo"><img src="/images/partners/logo2.jpg" alt="Partner 2" onError={(e) => e.target.style.display='none'} /></div>
-                <div className="partner-logo"><img src="/images/partners/logo3.jpg" alt="Partner 3" onError={(e) => e.target.style.display='none'} /></div>
-                <div className="partner-logo"><img src="/images/partners/logo4.jpg" alt="Partner 4" onError={(e) => e.target.style.display='none'} /></div>
+                <PartnerLogo src="/images/partners/logo1.jpg" alt="Partner 1" />
+                <PartnerLogo src="/images/partners/logo2.jpg" alt="Partner 2" />
+                <PartnerLogo src="/images/partners/logo3.jpg" alt="Partner 3" />
+                <PartnerLogo src="/images/partners/logo4.jpg" alt="Partner 4" />
               </div>
               {/* Slide 2 */}
               <div className="slide">
-                <div className="partner-logo"><img src="/images/partners/logo5.jpg" alt="Partner 5" onError={(e) => e.target.style.display='none'} /></div>
-                <div className="partner-logo"><img src="/images/partners/logo6.jpg" alt="Partner 6" onError={(e) => e.target.style.display='none'} /></div>
-                <div className="partner-logo"><img src="/images/partners/logo7.jpg" alt="Partner 7" onError={(e) => e.target.style.display='none'} /></div>
-                <div className="partner-logo"><img src="/images/partners/logo8.jpg" alt="Partner 8" onError={(e) => e.target.style.display='none'} /></div>
+                <PartnerLogo src="/images/partners/logo5.jpg" alt="Partner 5" />
+                <PartnerLogo src="/images/partners/logo6.jpg" alt="Partner 6" />
+                <PartnerLogo src="/images/partners/logo7.jpg" alt="Partner 7" />
+                <PartnerLogo src="/images/partners/logo8.jpg" alt="Partner 8" />
               </div>
             </div>
           </div>
