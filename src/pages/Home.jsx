@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { CheckCircle, Users, Award, Truck, TreePine } from 'lucide-react';
 import { FaCouch, FaChair, FaBed, FaHammer, FaBuilding, FaFacebook } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
-import Marquee from 'react-fast-marquee';
 import './Home.css';
 
 const Home = () => {
@@ -51,32 +50,28 @@ const Home = () => {
             <h2>شركاء النجاح</h2>
             <p>نفخر بالعمل مع نخبة من الشركات والمؤسسات الرائدة</p>
           </div>
-          <Marquee direction="left" speed={50} pauseOnHover={true} gradient={false} style={{ marginTop: '2rem' }}>
-            <div className="partner-logo">
-              <img src="/images/partners/logo1.jpg" alt="Partner 1" />
+          <div className="marquee-container">
+            <div className="marquee-content">
+              {/* First set of logos */}
+              <div className="partner-logo"><img src="/images/partners/logo1.jpg" alt="Partner 1" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo2.jpg" alt="Partner 2" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo3.jpg" alt="Partner 3" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo4.jpg" alt="Partner 4" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo5.jpg" alt="Partner 5" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo6.jpg" alt="Partner 6" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo7.jpg" alt="Partner 7" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo8.jpg" alt="Partner 8" /></div>
+              {/* Duplicate set for infinite loop */}
+              <div className="partner-logo"><img src="/images/partners/logo1.jpg" alt="Partner 1" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo2.jpg" alt="Partner 2" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo3.jpg" alt="Partner 3" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo4.jpg" alt="Partner 4" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo5.jpg" alt="Partner 5" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo6.jpg" alt="Partner 6" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo7.jpg" alt="Partner 7" /></div>
+              <div className="partner-logo"><img src="/images/partners/logo8.jpg" alt="Partner 8" /></div>
             </div>
-            <div className="partner-logo">
-              <img src="/images/partners/logo2.jpg" alt="Partner 2" />
-            </div>
-            <div className="partner-logo">
-              <img src="/images/partners/logo3.jpg" alt="Partner 3" />
-            </div>
-            <div className="partner-logo">
-              <img src="/images/partners/logo4.jpg" alt="Partner 4" />
-            </div>
-            <div className="partner-logo">
-              <img src="/images/partners/logo5.jpg" alt="Partner 5" />
-            </div>
-            <div className="partner-logo">
-              <img src="/images/partners/logo6.jpg" alt="Partner 6" />
-            </div>
-            <div className="partner-logo">
-              <img src="/images/partners/logo7.jpg" alt="Partner 7" />
-            </div>
-            <div className="partner-logo">
-              <img src="/images/partners/logo8.jpg" alt="Partner 8" />
-            </div>
-          </Marquee>
+          </div>
         </div>
       </section>
 
