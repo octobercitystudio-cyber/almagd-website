@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle, Users, Award, Truck, TreePine } from 'lucide-react';
 import { FaCouch, FaChair, FaBed, FaHammer, FaBuilding, FaFacebook } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
+import Marquee from 'react-fast-marquee';
 import './Home.css';
 
 const Home = () => {
@@ -50,7 +51,7 @@ const Home = () => {
             <h2>شركاء النجاح</h2>
             <p>نفخر بالعمل مع نخبة من الشركات والمؤسسات الرائدة</p>
           </div>
-          <div className="partners-grid">
+          <Marquee direction="left" speed={50} pauseOnHover={true} gradient={false} style={{ marginTop: '2rem' }}>
             <div className="partner-logo">
               <img src="/images/partners/logo1.jpg" alt="Partner 1" />
             </div>
@@ -75,7 +76,7 @@ const Home = () => {
             <div className="partner-logo">
               <img src="/images/partners/logo8.jpg" alt="Partner 8" />
             </div>
-          </div>
+          </Marquee>
         </div>
       </section>
 
